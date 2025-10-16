@@ -14,11 +14,14 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     /// Se llana al inicio del ciclo de vida del script.
     /// Inicia el proceso de conexión al servidor maestro de Photon usando la configuración predeterminada.
     /// </summary>
-    void Start()
-    {
-        PhotonNetwork.ConnectUsingSettings();
-    }
+    
+    //Cambio aqui(esto no estaba comentado)
+    //void Start()
+    //{
+    //    PhotonNetwork.ConnectUsingSettings();
+    //}
 
+    
     /// <summary>
     /// Se invoca cuando el cliente se ha conectado exitosamente al servidor maestro de Photon.
     /// Después de una conexión exitosa, el cliente intenta unirse a un lobby.

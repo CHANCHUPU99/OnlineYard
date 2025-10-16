@@ -3,26 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
+using Photon.Pun;
 
 public class PlayFabLogin : MonoBehaviour
 {
-    [SerializeField] private string titleId = "TU_TITLE_ID_AQUI"; // <- reemplaza por tu Title ID real
+    [Header("PlayFab Settings")]
+    [SerializeField] private string titleId = "139614"; 
     private const string CUSTOM_ID_KEY = "PLAYFAB_CUSTOM_ID";
-    public static string PlayFabId { get; private set; }
 
     void Start()
     {
-        // Configurar el Title ID de PlayFab
+        titleId = "139614";
+        // Configura el Title ID
         if (string.IsNullOrEmpty(PlayFabSettings.staticSettings.TitleId))
             PlayFabSettings.staticSettings.TitleId = titleId;
 
-        Login();
+        LoginWithCustomID();
     }
 
-    void Login()
+    void LoginWithCustomID()
     {
         string customId = PlayerPrefs.GetString(CUSTOM_ID_KEY, string.Empty);
-
         if (string.IsNullOrEmpty(customId))
         {
             customId = System.Guid.NewGuid().ToString();
@@ -36,22 +37,19 @@ public class PlayFabLogin : MonoBehaviour
             CreateAccount = true
         };
 
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
+        Debug.Log(" Iniciando sesión en PlayFab...");
+        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginError);
     }
 
     void OnLoginSuccess(LoginResult result)
     {
-        PlayFabId = result.PlayFabId;
-        Debug.Log($"? Login exitoso en PlayFab. PlayFabId: {PlayFabId}");
-
-        // Si tienes el PhotonConnector en el mismo GameObject, se conecta automáticamente:
-        PhotonConnector connector = GetComponent<PhotonConnector>();
-        //if (connector != null)
-        //    connector.ConnectToPhoton(PlayFabId);
+        Debug.Log($" Login exitoso. PlayFab ID: {result.PlayFabId}");
+        // Luego de autenticarse en PlayFab, conectamos a Photon
+        PhotonNetwork.ConnectUsingSettings();
     }
 
-    void OnLoginFailure(PlayFabError error)
+    void OnLoginError(PlayFabError error)
     {
-        Debug.LogError($"? Error de login: {error.GenerateErrorReport()}");
+        Debug.LogError($" Error de login en PlayFab: {error.GenerateErrorReport()}");
     }
 }
