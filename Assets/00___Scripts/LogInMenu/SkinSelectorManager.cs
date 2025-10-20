@@ -6,6 +6,8 @@ using UnityEngine.UI;
 using System;
 using System.IO;
 using JsonHelp;
+using PlayFab.ClientModels;
+using PlayFab;
 
 /// <summary>
 /// Gestiona la interfaz de usuario y la lógica para la selección de la skin de un personaje.
@@ -104,7 +106,6 @@ public class SkinSelectorManager : MonoBehaviour
     }
     
     public Sprite Blank;
-
     /// <summary>
     /// Selecciona una opción específica (sprite) dentro de la categoría actualmente activa.
     /// Actualiza el ID de la prenda en <see cref="selectedSkins"/> y maneja la lógica de exclusión mutua
@@ -213,11 +214,49 @@ public class SkinSelectorManager : MonoBehaviour
     /// </summary>
     public void SaveSelection()
     {
-        string json = JsonHelper.ToJson(selectedSkins, true);
+        string json = JsonHelp.JsonHelper.ToJson(selectedSkins, true);
         string url = Application.streamingAssetsPath + "/SelectedSkin.json";
         File.WriteAllText(url, json);
+
+        saveSelectionToPlayFab(json);
+    }
+    public void saveSelectionToPlayFab(string json)
+    {
+      //  string json = JsonHelp.JsonHelper.ToJson(selectedSkins, true);
+
+        var request = new UpdateUserDataRequest
+        {
+            Data = new Dictionary<string, string>
+        {
+            { "SelectedSkin", json }
+        }
+        };
+
+        PlayFabClientAPI.UpdateUserData(request,
+            result => Debug.Log(" Skin guardada en PlayFab exitosamente."),
+            error => Debug.LogError(" Error al guardar skin en PlayFab: " + error.GenerateErrorReport()));
     }
 
+    public void applySavedSelection(string outfitName){
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest(),
+       result =>
+       {
+           if (result.Data != null && result.Data.ContainsKey("SelectedSkin"))
+           {
+               string json = result.Data["SelectedSkin"].Value;
+               selectedSkins = JsonHelp.JsonHelper.FromJson<SelectedClothes>(json);
+               AssingSprites();
+               Debug.Log(" Skin cargada desde PlayFab correctamente.");
+           }
+           else
+           {
+               Debug.Log(" No se encontró ninguna skin guardada en PlayFab. Se usará la predeterminada.");
+               ReGenSkin();
+           }
+       },
+       error => Debug.LogError(" Error al cargar skin desde PlayFab: " + error.GenerateErrorReport())
+   );
+    }
     /// <summary>
     /// Regenera el directorio StreamingAssets si no existe.
     /// </summary>
@@ -306,14 +345,12 @@ public class SkinSelectorManager : MonoBehaviour
 
 namespace JsonHelp
 {
-
     /// <summary>
     /// Clase estática de utilidad para serializar y deserializar arrays de objetos a/desde JSON.,
     /// utilizando la funcionalidad <see cref="UnityEngine.JsonUtility"/>
     /// </summary>
     public static class JsonHelper
     {
-        
         /// <summary>
         /// Deserealiza una cadeha JSON que contiene un array de objetos de tipo <typeparamref name="T"/>.
         /// Requiere que el JSON esté envuelto en una estructura en una estructura con un campo "Items".
@@ -390,5 +427,4 @@ namespace JsonHelp
             public T[] Items;
         }
     }
-    
 }
