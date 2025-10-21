@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4502051262221297462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3816293710659966148}
+  - component: {fileID: 7752955108667517130}
+  - component: {fileID: 3371355730209034437}
+  - component: {fileID: 979857585416107273}
+  - component: {fileID: 5248271677461763051}
+  m_Layer: 0
+  m_Name: ServerManagers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3816293710659966148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502051262221297462}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.46267843, y: 2.0236893, z: 0.117156215}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7752955108667517130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502051262221297462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2973399bc4ec6fe45803481e5b04da64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: []
+--- !u!114 &3371355730209034437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502051262221297462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb1e0ea300c8c44a835108c3025dd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closet:
+  - name: Skins
+    oAnimators:
+    - {fileID: 22100000, guid: 33d2ffefb248d884e8c1be1bd23b2899, type: 2}
+    - {fileID: 22100000, guid: d3b5c05f19b5e8843ae7dc9c8f721b5e, type: 2}
+    - {fileID: 22100000, guid: 38ea7bc3e11ddae478cba7c59cf9b291, type: 2}
+    - {fileID: 22100000, guid: f5fae7da28fe8c14988f619261224bf0, type: 2}
+  - name: Hairs
+    oAnimators:
+    - {fileID: 22100000, guid: 7cba6b79626bdf049b2fa7b65993fa1e, type: 2}
+    - {fileID: 22100000, guid: d3281a3bc58cf294aab9d7d38a308a2d, type: 2}
+    - {fileID: 22100000, guid: 038c425be0db70244af7825f3930dc8e, type: 2}
+    - {fileID: 22100000, guid: 68556e6618e4c6740882a5db9fa5dd80, type: 2}
+    - {fileID: 22100000, guid: b4d0eafc7f85de64fadf4774121b01f2, type: 2}
+    - {fileID: 22100000, guid: a98f1b858895e2141860eb9a0fce85eb, type: 2}
+  - name: Shirts
+    oAnimators:
+    - {fileID: 22100000, guid: 54dd8896007fe484abbf636d463f1a12, type: 2}
+    - {fileID: 22100000, guid: 74e127702290cda498c65a81799d9725, type: 2}
+    - {fileID: 22100000, guid: f27522f54349ff24bbdcb6d6b0c5c660, type: 2}
+    - {fileID: 22100000, guid: 923892d0c4e381f40ad5602b201184a7, type: 2}
+    - {fileID: 22100000, guid: 2642338f25ae26649b1fd3cf3f242518, type: 2}
+    - {fileID: 22100000, guid: feff909c514ea504ea1d3a572f580aa1, type: 2}
+    - {fileID: 22100000, guid: 5d5842f83b75f754cb0b46b38eef0324, type: 2}
+    - {fileID: 22100000, guid: 45678649d7de89f44b498c02095425c0, type: 2}
+    - {fileID: 22100000, guid: 72fda285586d9394aa510f4c2d3ba558, type: 2}
+  - name: Pants
+    oAnimators:
+    - {fileID: 22100000, guid: 89213d094d614b248aa81809f2029e0a, type: 2}
+    - {fileID: 22100000, guid: 332b0ff14902e0c4c930931258dda2c4, type: 2}
+    - {fileID: 22100000, guid: ce44f3606a4daa84d8f9b4df01046348, type: 2}
+    - {fileID: 22100000, guid: e344de608ed3b144b935a73ffbf38ecd, type: 2}
+    - {fileID: 22100000, guid: 167979a243200c34f8d541ddb4a17a7f, type: 2}
+    - {fileID: 22100000, guid: de85f8b0919b20149adfcda326132cbc, type: 2}
+    - {fileID: 22100000, guid: 02133f70de174a84fb12881cd3f81c84, type: 2}
+    - {fileID: 22100000, guid: 318c772c806802845bb2f142898fe366, type: 2}
+    - {fileID: 22100000, guid: 45803f2aae6ae8b448ff3cf0dadea934, type: 2}
+    - {fileID: 22100000, guid: 2744bb5c3f229b742af08b615c384916, type: 2}
+  - name: Shoes
+    oAnimators:
+    - {fileID: 22100000, guid: 579dda969a1fac34b85a31fa4b851915, type: 2}
+    - {fileID: 22100000, guid: ef42363fc48344941828c09819091b88, type: 2}
+    - {fileID: 22100000, guid: 09b317b72a21fbf4482e0fb6ea111ea3, type: 2}
+    - {fileID: 22100000, guid: bf766b044376bf147b21d95c43800b27, type: 2}
+    - {fileID: 22100000, guid: a809d11a53b3e6b449b9fae19b521f81, type: 2}
+    - {fileID: 22100000, guid: 6fd361878733e01449452e92fa023337, type: 2}
+    - {fileID: 22100000, guid: 146b84909f7dd6846bf298d406ea16b4, type: 2}
+    - {fileID: 22100000, guid: 62d76178bfc91424f80f981cc6ec7bed, type: 2}
+    - {fileID: 22100000, guid: f51c07e7622bdae4abf3604171d922b0, type: 2}
+    - {fileID: 22100000, guid: 623110bb2dc56ac4e92e7ba465290558, type: 2}
+  - name: Accesories
+    oAnimators:
+    - {fileID: 22100000, guid: 7cba6b79626bdf049b2fa7b65993fa1e, type: 2}
+    - {fileID: 22100000, guid: bd18732448d989148bca11ff9b2838d9, type: 2}
+    - {fileID: 22100000, guid: 6c532c03256e0074f9b59c756372228e, type: 2}
+    - {fileID: 22100000, guid: a9e834fff9dd45341b98ba1dcce85d1f, type: 2}
+    - {fileID: 22100000, guid: 46d78010b3c5c3846891e86138d65e09, type: 2}
+    - {fileID: 22100000, guid: ddc19bec3f1daff47800ad1ad793dee2, type: 2}
+    - {fileID: 22100000, guid: 7c2de3bff5b6f074785e98970ef492bb, type: 2}
+    - {fileID: 22100000, guid: 2a3e511e6096b5b4aacc87e4f8a91818, type: 2}
+    - {fileID: 22100000, guid: 4e851abc21dc38f45802b8d39c4fc171, type: 2}
+    - {fileID: 22100000, guid: ca1905c764e802d41b2649b961de34f3, type: 2}
+--- !u!114 &979857585416107273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502051262221297462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3297f7ad93da53744ac5a1f71745ae32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5248271677461763051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502051262221297462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
