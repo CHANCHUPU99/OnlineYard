@@ -3,11 +3,11 @@
         {
             "viewID": [],
             "skin": 1,
-            "hair": 3,
-            "shirt": 4,
-            "pants": 7,
-            "shoes": 7,
-            "acce": 0
+            "hair": 0,
+            "shirt": 1,
+            "pants": 5,
+            "shoes": 4,
+            "acce": 6
         }
     ]
 }

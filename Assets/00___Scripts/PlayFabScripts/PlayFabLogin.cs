@@ -45,7 +45,7 @@ public class PlayFabLogin : MonoBehaviour
     {
         Debug.Log($" Login exitoso. PlayFab ID: {result.PlayFabId}");
         // Luego de autenticarse en PlayFab, conectamos a Photon
-        PhotonNetwork.ConnectUsingSettings();
+      //  PhotonNetwork.ConnectUsingSettings();
     }
 
     void OnLoginError(PlayFabError error)

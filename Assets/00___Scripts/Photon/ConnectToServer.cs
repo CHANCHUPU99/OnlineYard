@@ -12,6 +12,7 @@ using PlayFab;
 /// </summary>
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
+    /*Version anterior de connect
     /// <summary>
     /// Se llana al inicio del ciclo de vida del script.
     /// Inicia el proceso de conexión al servidor maestro de Photon usando la configuración predeterminada.
@@ -82,7 +83,80 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     /// </summary>
     public override void OnJoinedLobby()
     {
-        Debug.Log("✅ Se ha unido al lobby, cargando escena del juego...");
-        SceneManager.LoadScene("Game_Test");
+        Debug.Log(" Se ha unido al lobby, cargando escena del juego...");
+        PhotonNetwork.JoinOrCreateRoom("SalaPrincipal", new Photon.Realtime.RoomOptions { MaxPlayers = 10 }, Photon.Realtime.TypedLobby.Default);
+    }
+
+    public override void OnJoinedRoom()
+    {
+        Debug.Log("Jugador unido a la sala. Cargando escena del juego...");
+        //SceneManager.LoadScene("Game_Test");
+        PhotonNetwork.LoadLevel("Game_Test");
+    }*/
+    void Start()
+    {
+        Debug.Log(" Iniciando conexión: obteniendo datos del jugador desde PlayFab...");
+        LoadPlayerCustomization();
+    }
+
+    /// <summary>
+    /// Obtiene la personalización del jugador desde PlayFab antes de conectarse a Photon.
+    /// </summary>
+    private void LoadPlayerCustomization()
+    {
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest(), OnDataReceived, OnDataError);
+    }
+
+    private void OnDataReceived(GetUserDataResult result)
+    {
+        Debug.Log(" Datos del jugador recibidos desde PlayFab.");
+
+        if (result.Data == null || !result.Data.ContainsKey("SelectedSkin"))
+        {
+            Debug.LogWarning(" No se encontró 'SelectedSkin' en PlayFab. Usando valores por defecto...");
+
+            PlayerDataManager.Instance.selectedSkin = new SelectedClothes[1];
+            PlayerDataManager.Instance.selectedSkin[0] = new SelectedClothes();
+        }
+        else
+        {
+            string json = result.Data["SelectedSkin"].Value;
+            Debug.Log(" Skin obtenida desde PlayFab: " + json);
+
+            PlayerDataManager.Instance.selectedSkin = JsonHelp.JsonHelper.FromJson<SelectedClothes>(json);
+
+            Debug.Log(" Skin almacenada en PlayerDataManager.");
+        }
+
+        // Ahora sí, conectamos a Photon
+        PhotonNetwork.ConnectUsingSettings();
+    }
+
+    private void OnDataError(PlayFabError error)
+    {
+        Debug.LogWarning(" Error al obtener los datos del jugador desde PlayFab: " + error.GenerateErrorReport());
+
+        PlayerDataManager.Instance.selectedSkin = new SelectedClothes[1];
+        PlayerDataManager.Instance.selectedSkin[0] = new SelectedClothes();
+
+        PhotonNetwork.ConnectUsingSettings();
+    }
+
+    public override void OnConnectedToMaster()
+    {
+        Debug.Log(" Conectado al servidor maestro de Photon. Intentando unir al lobby...");
+        PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        Debug.Log(" Se ha unido al lobby. Intentando unirse o crear la sala principal...");
+        PhotonNetwork.JoinOrCreateRoom("SalaPrincipal", new Photon.Realtime.RoomOptions { MaxPlayers = 10 }, Photon.Realtime.TypedLobby.Default);
+    }
+
+    public override void OnJoinedRoom()
+    {
+        Debug.Log(" Jugador unido a la sala. Cargando escena del juego...");
+        PhotonNetwork.LoadLevel("Game_Test");
     }
 }

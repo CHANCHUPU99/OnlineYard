@@ -9558,7 +9558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &674648733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29872,8 +29872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738193b83ac5b85469753f189cc6c5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObject: {fileID: 1526246235}
-  ManagerObject: {fileID: 7486221552785487636}
+  playerPrefabName: PlayerCustom
+  managerPrefabName: ServerManagers
 --- !u!1 &653876401412574272
 GameObject:
   m_ObjectHideFlags: 0

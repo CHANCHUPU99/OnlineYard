@@ -13,17 +13,7 @@ public class PlayFabRegister : MonoBehaviour
     [SerializeField] TMP_InputField mailInputField; 
     [SerializeField] TMP_InputField passwordInputField;
     public GameObject registerButton;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     public void registerNewUser(){
 
         PlayFabSettings.staticSettings.TitleId = "139614";
@@ -31,15 +21,9 @@ public class PlayFabRegister : MonoBehaviour
         string email = mailInputField.text;
         string password = passwordInputField.text;
 
-
         if(!email.Contains("@") || !email.Contains(".")){
             Debug.LogWarning("introduce una direccion de correo electronico valida");
         }
-        //if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(nombre))
-        //{
-           
-        //    return;
-        //}
 
         var request = new RegisterPlayFabUserRequest
         {
