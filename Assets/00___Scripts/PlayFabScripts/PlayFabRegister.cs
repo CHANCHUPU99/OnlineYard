@@ -56,7 +56,7 @@ public class PlayFabRegister : MonoBehaviour
     {
         Debug.Log("se registro correctamente");
         registerButton.SetActive(true);
-        SceneManager.LoadScene("MainMenu_Game");
+        SceneManager.LoadScene("CharacterCreation_Game");
     }
     public void onRegisterError(PlayFabError error)
     {

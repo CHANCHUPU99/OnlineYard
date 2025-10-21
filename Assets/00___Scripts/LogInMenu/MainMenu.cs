@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
        // PlayFabClientAPI.RegisterPlayFabUser();
     }
+
+    public void userRegister()
+    {
+        SceneManager.LoadScene("UserRegister");
+    }
 }

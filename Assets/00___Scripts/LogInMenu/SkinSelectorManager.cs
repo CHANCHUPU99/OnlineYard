@@ -206,6 +206,7 @@ public class SkinSelectorManager : MonoBehaviour
     {
         //Pasar info del player al player Manager
         SaveSelection();
+        SceneManager.LoadScene("LoadingScreen_Test");
     }
 
     /// <summary>

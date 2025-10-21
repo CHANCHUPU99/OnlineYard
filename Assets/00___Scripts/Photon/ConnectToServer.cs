@@ -34,33 +34,37 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     private void OnDataReceived(GetUserDataResult result)
     {
-        Debug.Log(" Datos del jugador recibidos desde PlayFab.");
+        Debug.Log("Datos del jugador recibidos desde PlayFab.");
 
-        // Aquí puedes acceder a tus claves guardadas (por ejemplo, "SkinColor", "Outfit", etc.)
-        if (result.Data != null)
+        if (result.Data != null && result.Data.ContainsKey("SelectedSkin"))
         {
-            if (result.Data.ContainsKey("SelectedOutfit"))
-            {
-                string outfit = result.Data["SelectedOutfit"].Value;
-                Debug.Log("Skin cargada: " + outfit);
+            string json = result.Data["SelectedSkin"].Value;
+            Debug.Log(" Skin obtenida desde PlayFab: " + json);
 
-                // Si tienes un SkinSelectorManager global o persistente:
-                var skinManager = FindObjectOfType<SkinSelectorManager>();
-                if (skinManager != null)
-                {
-                    skinManager.applySavedSelection(outfit);
-                }
-            }
+            // 2️⃣ Guardar la skin globalmente en el PlayerDataManager
+            PlayerDataManager.Instance.selectedSkin = JsonHelp.JsonHelper.FromJson<SelectedClothes>(json);
+
+            Debug.Log(" Skin almacenada en PlayerDataManager.");
         }
+        else
+        {
+            Debug.Log(" No se encontró ninguna skin guardada. Usando valores por defecto.");
 
-        //  Una vez que cargamos los datos, conectamos a Photon
+            // Si no hay skin guardada, inicializa una vacía
+            PlayerDataManager.Instance.selectedSkin = new SelectedClothes[1];
+            PlayerDataManager.Instance.selectedSkin[0] = new SelectedClothes();
+        }
         PhotonNetwork.ConnectUsingSettings();
     }
 
     private void OnDataError(PlayFabError error)
     {
-        Debug.LogWarning("⚠️ Error al obtener los datos del jugador: " + error.GenerateErrorReport());
-        // Aunque haya error, seguimos y nos conectamos
+        Debug.LogWarning(" Error al obtener los datos del jugador: " + error.GenerateErrorReport());
+
+        // Si falla la carga de datos, seguimos igual con una skin vacía
+        PlayerDataManager.Instance.selectedSkin = new SelectedClothes[1];
+        PlayerDataManager.Instance.selectedSkin[0] = new SelectedClothes();
+
         PhotonNetwork.ConnectUsingSettings();
     }
 
@@ -69,6 +73,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     /// </summary>
     public override void OnConnectedToMaster()
     {
+        Debug.Log("🌐 Conectado al servidor maestro de Photon.");
         PhotonNetwork.JoinLobby();
     }
 
@@ -77,6 +82,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     /// </summary>
     public override void OnJoinedLobby()
     {
+        Debug.Log("✅ Se ha unido al lobby, cargando escena del juego...");
         SceneManager.LoadScene("Game_Test");
     }
 }
