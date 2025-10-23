@@ -4,32 +4,43 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class PlayFabSetUserDescription : MonoBehaviour
 {
-    [SerializeField] TMP_InputField userNameInputField;
+    [SerializeField] TMP_InputField fullNameInputField;
+    [SerializeField] TMP_InputField usernameInputField;
     [SerializeField] TMP_InputField userDescriptionInputField;
-    
-    void uploadUserDescription(){
-
-    }
-
-    //
     public void SetUserData()
     {
-        PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest()
+        string fullName = fullNameInputField.text;
+        string username = usernameInputField.text;
+        string userDescription = userDescriptionInputField.text;
+        var request = new UpdateUserDataRequest
         {
-            Data = new Dictionary<string,string>()
+            Data = new Dictionary<string, string>
             {
-                {"name", "Ivan Osvaldo Flores Carmona" },
-                {"userDescription", "hola, soy ivan" }
+                { "name", fullName },
+                { "username", username },
+                { "userDescription", userDescription }
             }
-        },
-        result => Debug.Log("Successfully updated user data"),
-        error =>
-        {
-            Debug.Log("Got error setting user data Ancestor to Arthur");
-            Debug.Log(error.GenerateErrorReport());
-        });
+        };
+
+        PlayFabClientAPI.UpdateUserData(request,
+            result =>
+            {
+                Debug.Log(" Datos del usuario actualizados correctamente en PlayFab.");
+                if (PlayerDataManager.Instance != null)
+                {
+                    PlayerDataManager.Instance.SetProfileData(fullName, username, userDescription);
+                }
+                SceneManager.LoadScene("CharacterCreation_Game");
+            },
+            error =>
+            {
+                Debug.LogError(" Error al actualizar los datos del usuario:");
+                Debug.LogError(error.GenerateErrorReport());
+            });
     }
-   
 }
+   
+

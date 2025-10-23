@@ -63,7 +63,6 @@ public class PlayerManager : MonoBehaviourPunCallbacks
             return;
         }
 
-        // Validar `PlayerAnimation`
         if (plMov.PlayerAnimation == null)
         {
             Debug.LogError("PlayerAnimation no asignado en PlayerMovement.");
