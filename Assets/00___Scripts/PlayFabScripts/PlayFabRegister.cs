@@ -13,6 +13,7 @@ public class PlayFabRegister : MonoBehaviour
     [SerializeField] TMP_InputField mailInputField; 
     [SerializeField] TMP_InputField passwordInputField;
     public GameObject registerButton;
+    public string usernameVar;
    
     public void registerNewUser(){
 
@@ -34,6 +35,7 @@ public class PlayFabRegister : MonoBehaviour
         };
 
         PlayFabClientAPI.RegisterPlayFabUser(request, onRegisterSuccess, onRegisterError);
+        usernameVar = nameInputField.text;
     }
 
     public void onRegisterSuccess(RegisterPlayFabUserResult result)

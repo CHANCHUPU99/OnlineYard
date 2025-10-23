@@ -53,7 +53,8 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString("PlayFabId", result.PlayFabId);
 
         // 🔹 Redirigir a la escena de carga (para que ConnectToServer se encargue del resto)
-        SceneManager.LoadScene("LoadingScreen_Test");
+       // SceneManager.LoadScene("LoadingScreen_Test");
+        SceneManager.LoadScene("UserDescription");
     }
 
     // 🔹 Si hubo un error al iniciar sesión

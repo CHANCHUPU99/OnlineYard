@@ -12,6 +12,8 @@ using Photon.Realtime;
 using Photon.Pun;
 using System.Linq;
 using Unity.Burst.CompilerServices;
+using PlayFab;
+using PlayFab.ClientModels;
 
 /// <summary>
 /// Gestiona la información del jugador, su apariencia (ropa), movimiento y sincronización de datos a través
