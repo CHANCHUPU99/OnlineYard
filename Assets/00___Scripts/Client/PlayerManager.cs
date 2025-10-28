@@ -210,7 +210,15 @@ public class PlayerManager : MonoBehaviourPunCallbacks
     /// </summary>
     private void SetNameInOthers()
     {
-        photonView.RPC("SyncName", RpcTarget.AllBuffered, photonView.ViewID);
+        //photonView.RPC("SyncName", RpcTarget.AllBuffered, photonView.ViewID);
+        if (photonView.IsMine)
+        {
+            string playerName = PlayerDataManager.Instance != null
+                ? PlayerDataManager.Instance.username
+                : "Jugador";
+
+            photonView.RPC("SyncName", RpcTarget.AllBuffered, photonView.ViewID, playerName);
+        }
     }
 
     /// <summary>
@@ -219,10 +227,10 @@ public class PlayerManager : MonoBehaviourPunCallbacks
     /// </summary>
     /// <param name="viewID">El PhotonView ID del jugador cuyo nombre se está sincronizando.</param>
     [PunRPC]
-    private void SyncName(int viewID)
+    private void SyncName(int viewID, string syncedName)
     {
-        Debug.Log($"SyncName llamado para ViewID {viewID}");
-        StartCoroutine(SetMyName(viewID));
+        Debug.Log($"SyncName llamado para ViewID {viewID}, nombre: {syncedName}");
+        StartCoroutine(SetMyName(viewID, syncedName));
     }
 
     /// <summary>
@@ -231,16 +239,20 @@ public class PlayerManager : MonoBehaviourPunCallbacks
     /// </summary>
     /// <param name="viewID">El PhotonView ID del jugador cuyo nombre se va a establecer.</param>
     /// <returns></returns>
-    IEnumerator SetMyName(int viewID)
+    IEnumerator SetMyName(int viewID, string syncedName)
     {
-        yield return new WaitUntil(() => publicName != null && _name != null);
+        // Espera a que el TextMeshPro se haya referenciado correctamente
+        yield return new WaitUntil(() => publicName != null);
+
         if (photonView.ViewID != viewID)
         {
-            Debug.LogWarning($"ViewID {viewID} no coincide con el ViewID local {photonView.ViewID}");
             yield break;
         }
-        Name = viewID.ToString("#########");
-        publicName.text = viewID.ToString("#########");
+
+        Name = syncedName;
+        publicName.text = syncedName;
+
+        Debug.Log($"✅ Nombre del jugador asignado: {syncedName} (ViewID {viewID})");
     }
 
     /// <summary>
