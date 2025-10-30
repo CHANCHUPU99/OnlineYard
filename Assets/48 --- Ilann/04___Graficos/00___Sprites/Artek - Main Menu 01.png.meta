@@ -1,0 +1,932 @@
+fileFormatVersion: 2
+guid: 573ce79e8f1352e4cb4e56f50af14fbd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 800
+        width: 352
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6be9795066d80848af5f53417a5073b
+      internalID: 980084722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 992
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e25b42ed9ef7d4994d0c565100871c
+      internalID: -1015247558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 686
+        width: 320
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5dd33adadd90cd4fae3170e7a2f7c45
+      internalID: 1055409344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_3
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 554
+        width: 12
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f44c2ba3874af4d8fec370cb5a9be9
+      internalID: 379284316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_4
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 554
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8091c9dcc0e3d44b7a805e6543456a
+      internalID: -186295258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_5
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 592
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0947ef5e206db7647b90ca35a89ae3d4
+      internalID: -513863181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_6
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 554
+        width: 12
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba28c9275a828e49a023fa90301ad36
+      internalID: 1446650578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_7
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f47edc76553612498f6dcdc5ad8d1ee
+      internalID: -2051527709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_8
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428bd9b274ae7f746a9693fba1b4b144
+      internalID: -1868804729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 554
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfe5f213c8a3ee4382982411ba1a0de
+      internalID: -1038618821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_10
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 554
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11e648e47fd3f6419e2237b48be37ce
+      internalID: 558600028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6774d448d286a064794432f00d7c35eb
+      internalID: 419923952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1af384e0b7737c4d88636581295019b
+      internalID: 1743772458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_13
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e6d6b4ce25a3e46b56425e94b88d20
+      internalID: 757363018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_14
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa18fea4f4deba4d905bec883e6589d
+      internalID: -976454083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_15
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1011aa9f1816f9439665ba8be56fa79
+      internalID: -1717934305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_16
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 554
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc20ebc88bcaeca4281c898c5d5012ce
+      internalID: -1301410618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_17
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937053b1252125c4da5c523ef3815901
+      internalID: 1593730961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_18
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 554
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d14fcf27807dd43b8c9c3833fda7af
+      internalID: -1388705995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_19
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59746f5c1376c64095d2e4d398602d8
+      internalID: 2009522648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_20
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 554
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798deba93dbaf6649af873e4d3f5fa68
+      internalID: -1474403648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_21
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 428
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d86535a6080734e922df23e8c78a7d
+      internalID: 352239017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_22
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 466
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5315fdc868a05d04a8671276267b45c3
+      internalID: -1821142609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_23
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 428
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbda88a87a8fef84eb2315b2999beca2
+      internalID: -325314453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_24
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 428
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3abd89a442648498ee65f8e5b98f94
+      internalID: -1428187925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_25
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 428
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff312f84a516f0c41909d76e85d36d55
+      internalID: -501130900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_26
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 428
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee3bc0869e3ff14b9553af7dbfa73e8
+      internalID: 272956245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_27
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 428
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8ac9d2311116044bfbfa7be403f8f6
+      internalID: 1668454664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_28
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 428
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06b64f70925c054cac9d0f0ce45052d
+      internalID: 1324576412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_29
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 428
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f7c825322abfe40ba51f8a587da2e9
+      internalID: -776806966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_30
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 428
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4358171bc4bd7d40a2bca9a5c73a0be
+      internalID: -2071945279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_31
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 428
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052e883318750f1499c26177b8d88281
+      internalID: -1837589505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_32
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 136
+        width: 246
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311843038eb5d964a9f0ab22d50ecb34
+      internalID: 1735719336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_33
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 135
+        width: 142
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685e6e8c3a15fde488e0373a2d6e8d46
+      internalID: -1461147937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_34
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 256
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5df5b0c1d28ab0469594562633eb4ef
+      internalID: 562325173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Artek - Main Menu 01_35
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 5
+        width: 152
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2698da511788424aa415f20f74c0561
+      internalID: -1379653640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Artek - Main Menu 01_0: 980084722
+      Artek - Main Menu 01_1: -1015247558
+      Artek - Main Menu 01_10: 558600028
+      Artek - Main Menu 01_11: 419923952
+      Artek - Main Menu 01_12: 1743772458
+      Artek - Main Menu 01_13: 757363018
+      Artek - Main Menu 01_14: -976454083
+      Artek - Main Menu 01_15: -1717934305
+      Artek - Main Menu 01_16: -1301410618
+      Artek - Main Menu 01_17: 1593730961
+      Artek - Main Menu 01_18: -1388705995
+      Artek - Main Menu 01_19: 2009522648
+      Artek - Main Menu 01_2: 1055409344
+      Artek - Main Menu 01_20: -1474403648
+      Artek - Main Menu 01_21: 352239017
+      Artek - Main Menu 01_22: -1821142609
+      Artek - Main Menu 01_23: -325314453
+      Artek - Main Menu 01_24: -1428187925
+      Artek - Main Menu 01_25: -501130900
+      Artek - Main Menu 01_26: 272956245
+      Artek - Main Menu 01_27: 1668454664
+      Artek - Main Menu 01_28: 1324576412
+      Artek - Main Menu 01_29: -776806966
+      Artek - Main Menu 01_3: 379284316
+      Artek - Main Menu 01_30: -2071945279
+      Artek - Main Menu 01_31: -1837589505
+      Artek - Main Menu 01_32: 1735719336
+      Artek - Main Menu 01_33: -1461147937
+      Artek - Main Menu 01_34: 562325173
+      Artek - Main Menu 01_35: -1379653640
+      Artek - Main Menu 01_4: -186295258
+      Artek - Main Menu 01_5: -513863181
+      Artek - Main Menu 01_6: 1446650578
+      Artek - Main Menu 01_7: -2051527709
+      Artek - Main Menu 01_8: -1868804729
+      Artek - Main Menu 01_9: -1038618821
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

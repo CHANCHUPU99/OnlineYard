@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/01___Scenes/00___Pruebas-Tests/Game_Test.unity
     guid: fe502ea30e231114c943ece0c3f74221
   - enabled: 1
-    path: Assets/01___Scenes/00___Pruebas-Tests/UserRegister.unity
+    path: Assets/01___Scenes/01___Juego-Game/UserRegister.unity
     guid: 1c3513818b1cc134d8620b9016ea4a8e
   - enabled: 0
     path: Assets/Scenes/LabExample.unity
