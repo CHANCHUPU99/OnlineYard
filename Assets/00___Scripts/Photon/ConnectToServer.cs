@@ -134,6 +134,11 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
             PlayerDataManager.Instance.userDescription = description;
             Debug.Log($" Datos del usuario cargados: {fullName}, {username}, {description}");
         }
+
+        //ESTA LÍNEA ES CLAVE 
+        PhotonNetwork.NickName = PlayerDataManager.Instance.username;
+        Debug.Log($"NickName de Photon asignado a: {PhotonNetwork.NickName}");
+
         PhotonNetwork.ConnectUsingSettings();
     }
 
@@ -146,6 +151,10 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         PlayerDataManager.Instance.fullName = "Sin nombre";
         PlayerDataManager.Instance.username = "Invitado";
         PlayerDataManager.Instance.userDescription = "Sin descripción";
+
+        // Asigna el NickName también aquí
+        PhotonNetwork.NickName = PlayerDataManager.Instance.username;
+        Debug.Log($"NickName de Photon (error case) asignado a: {PhotonNetwork.NickName}");
 
         PhotonNetwork.ConnectUsingSettings();
     }
