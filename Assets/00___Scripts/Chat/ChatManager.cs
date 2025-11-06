@@ -56,7 +56,7 @@ public class ChatManager : MonoBehaviourPunCallbacks
         playerManager = FindObjectOfType<PlayerManager>();
         chatPanel = GameObject.Find("WindowChat");
         view = GetComponent<PhotonView>(); 
-        chatPanel.SetActive(false); // Oculta el panel de chat del inicio.
+        chatPanel.SetActive(true); // Oculta el panel de chat del inicio.
 
         // Actualiza la lista de jugadores después de un breve retraso para asegurar que todo esté inicializado.
         Invoke(nameof(UpdatePlayerList), 0.5f);

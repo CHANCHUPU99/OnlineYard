@@ -21,7 +21,7 @@ public class SpawnPlayers : MonoBehaviour
         Vector2 randomPosition = new Vector2(0,0);
         
         PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
-
+        PhotonNetwork.LocalPlayer.TagObject = playerPrefab;
     }
 
 }
